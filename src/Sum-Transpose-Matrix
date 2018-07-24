@@ -1,0 +1,61 @@
+/*wap to 2-D Array calculate the sum of matrix and transpose the matrix*/
+#include<iostream.h>
+#include<conio.h>
+class Matrix
+{
+int m, n, i, j, a[10][10], b[10][10], sum[10][10],trans[10][10];
+public:
+void gatevalue()
+{
+cout<<"Enter the number of rows and columns of matrix ";
+cin>>m>>n;
+cout<<"Enter the elements of a matrix\n";
+for(i=0;i<m;i++)
+for(j=0;j<n;j++)
+cin>>a[i][j];
+cout<<"Enter the elements of b matrix\n";
+for(i=0;i<m;i++)
+for(j=0;j<n;j++)
+cin>>b[i][j];
+}
+void sum1()
+{
+for(i=0;i<m;i++)
+for(j=0 ;j<n;j++)
+sum[i][j]=a[i][j]+b[i][j];
+cout<<"Sum of entered matrices:-\n";
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+cout<<sum[i][j]<< "\t";
+cout << endl;
+}
+}
+void transpose()
+{
+for(i=0;i<m;i++){
+for( j=0;j<n;j++)
+{
+trans[j][i]=a[i][j];
+}
+cout<<endl;
+}
+cout<<"transpose matrix a"<<endl;
+for(i=0;i<m;i++){
+for(j=0;j<n;j++)
+{
+cout<<trans[i][j]<<"\t";
+}
+cout<<endl;
+}
+}
+};
+void main()
+{
+clrscr();
+Matrix obj;
+obj.gatevalue();
+obj.sum1();
+obj.transpose();
+getch();
+}
