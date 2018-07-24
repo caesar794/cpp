@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+const float pi=3.14;
+float vol(float l)
+{	return l*l*l;
+}
+float vol(float r,float h)
+{	return (pi*r*r*h);
+}
+void main()
+{	float side,x,y,t;
+	clrscr();
+	cout<<"\nEnter the Length of Cube:";
+	cin>>side;
+	t=vol(side);
+	cout<<"\nVolume of Cube: "<<t;
+	cout<<"\nEnter the Radius & Height of Cylinder:";
+	cin>>x>>y;
+	t=vol(x,y);
+	cout<<"\nVolume of Cylinder: "<<t;
+	getch();
+}
