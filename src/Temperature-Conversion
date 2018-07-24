@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{	int ch,b,c,d,e,f;
+	clrscr();
+	cout<<"\nChoose any option from below\n\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit :";
+	cin>>ch;
+	switch(ch)
+	{	case 1: cout<<"\nEnter the fahrenheit :";
+			cin>>b;
+			d=((b-32)/1.8);
+			cout<<"Celsius :"<<d;
+			break;
+		case 2: cout<<"\nEnter the celsius :";
+			cin>>e;
+			f=1.8*e+32;
+			cout<<"Fahrenheit :"<<f;
+			break;
+		default:cout<<"Wrong choice..";
+			break;
+	}
+	getch();
+}
