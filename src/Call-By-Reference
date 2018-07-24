@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+void swap(int &a,int &b)
+{	int temp;
+	temp=a;
+	a=b;
+	b=temp;
+}
+void main()
+{	clrscr();
+	int i=5,j=10;
+	cout<<"\nBefore swapping\n I:"<<i<<" "<<"J:"<<j;
+	swap(i,j);
+	cout<<"\nAfter swapping\n I:"<<i<<" "<<"J:"<<j;
+	getch();
+}
