@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+struct std
+{	char name[10];
+	int id;
+};
+void show(std *a1)
+{	cout<<"\n\tDetails"<<endl;
+	cout<<"\n\tName"<<"\t "<<"User_id"<<endl;
+	cout<<"\t"<<(*a1).name<<"\t "<<(*a1).id<<endl;
+}
+void main()
+{	std *a1;
+	//std a2;
+	clrscr();
+	//a1=&a2;
+	cout<<"\nEnter the name :";
+	cin>>(*a1).name;
+	cout<<"\nEnter the user_id:";
+	cin>>(*a1).id;
+	show(a1);
+	getch();
+}
