@@ -1,0 +1,43 @@
+/*WAP to impliment the unary operator overloading*/
+#include<iostream.h>
+#include<conio.h>
+class Space{
+int x,y,z;
+public:
+void gatvalue()
+{
+ cout<<"Enter the value x,y,z";
+ cin>>x>>y>>z;
+}
+void operator++()
+{
+ x=++x;
+ y=++y;
+ z=++z;
+}
+void operator--()
+{
+ x=--x;
+ y=--y;
+ z=--z;
+}
+void display()
+{
+cout<<"x : "<<x<<endl<<"y : "<<y<<endl<<"z : "<<z<<endl;
+}
+};
+void main()
+{
+clrscr();
+Space s,s1;
+s.gatvalue();
+cout<<"the value of all coordinate before the overload"<<endl;
+s.display();
+cout<<"the value of all coordinate after increment operator overload"<<endl;
+++s;
+s.display();
+cout<<"the value of all coordinate after decrement operator overload"<<endl;
+--s;
+s.display();
+getch();
+}
