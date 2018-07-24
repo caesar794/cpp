@@ -1,0 +1,30 @@
+#include<iostream.h>
+#include<conio.h>
+class abstract
+{	public:
+	int x,y;	
+	virtual void getdata()=0;
+	virtual void show()=0;
+};
+class derive : public abstract
+{	public:
+	void getdata()
+	{	cout<<"\nEnter value (x):";
+		cin>>x;
+		cout<<"\nEnter value (y):";
+		cin>>y;
+	}
+	void show()
+	{	int sum;
+		cout<<"\nCalculating sum :";
+		sum=x+y;
+		cout<<"\nSum :"<<sum<<endl;
+	}
+};
+void main()
+{	derive d;
+	clrscr();
+	d.getdata();
+	d.show();
+	getch();
+}
