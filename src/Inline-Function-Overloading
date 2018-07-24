@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+inline float area(float base, float height)
+{	float area;
+	area=(0.5*base*height);
+	return area;
+}
+inline float areaa(float side)
+{	return (side*side);
+}
+void main()
+{	float base, height,ar1,ar2,side;
+	clrscr();
+	cout<<"\nEnter the base and height :";
+	cin>>base>>height;
+	ar1=area(base,height);
+	cout<<"\nArea of triangle: "<<ar1;
+	cout<<"\nEnter the side :";
+	cin>>side;
+	ar2=areaa(side);
+	cout<<"\nArea of cube:"<<ar2;
+	getch();
+}
