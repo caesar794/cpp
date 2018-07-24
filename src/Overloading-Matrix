@@ -1,0 +1,62 @@
+#include<iostream.h>
+#include<conio.h>
+class matrix
+{	longm[5][5];
+	int row,col;
+	public:
+	void getdata();
+	int operator==(matrix);
+	matrix operator+(matrix);
+	friend ostream &operator<<(ostream &,matrix &);
+};
+int matrix :: operator==(matrix cm)
+{	if(row==cm.row && col==cm.col)
+	return 1;
+	else
+	return 0;
+} 
+void matrix :: getdata()
+{	cout<<"\nEnter the no. of rows :";
+	cin>>row;
+	cout<<"\nEnter the no. of columns :";
+	cin>>col;
+	cout<<"\nEnter the elements :";
+	for(int i=0;i<row;i++)
+	{	for(int j=0;j<col;j++)
+		{	cin>>m[i][j];
+		}
+	}
+}
+matrix matrix :: operator+(matrix am)
+{	matrix temp;
+	for(int i=0;i<row;i++)
+	{	for(int j=0;j<col;j++)
+		{	temp.m[i][j]=m[i][j]+am.m[i][j];
+		}
+		temp.row=row;
+		temp.col=col;
+	}
+	return temp;
+}
+ostream & operator << (ostream & fout, matrix &d)
+{	for(int i=0;i<d.row;i++)
+	{	for(int j=0;j<d.col;j++)
+		{	fout<<d.m[i][j];
+			cout<<" ";
+		}
+		cout<<endl;
+	}
+	return fout;
+}
+void main()
+{	matrix m1,m2,m3;
+	clrscr();
+	m1.getdata();
+	m2.getdata();
+	if(m1==m2)
+	{	m3=m1+m2;
+		cout<<"\nAddition result :"<<endl;
+		cout<<m3;
+	}
+	getch();
+}
