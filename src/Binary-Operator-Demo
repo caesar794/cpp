@@ -1,0 +1,35 @@
+/*wap use binary operator*/
+#include<iostream.h>
+#include<conio.h>
+class Complex
+{
+public:
+int a,b;
+void gatvalue()
+{
+cout<<"Enter the value a and b"<<endl;
+cin>>a>>b;
+}
+Complex operator+(Complex &obj)
+{
+Complex t;
+t.a=a+obj.a;
+t.b=b+obj.b;
+return t;
+}
+void display()
+{
+cout<<"Sum of complex no are"<<endl;
+cout<<a<<"+"<<b<<"i"<<endl;
+}
+};
+void main()
+{
+clrscr();
+Complex  obj1,obj2,result;
+obj1.gatvalue();
+obj2.gatvalue();
+result=obj1+obj2;
+result.display();
+getch();
+}
