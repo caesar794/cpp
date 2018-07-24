@@ -1,0 +1,48 @@
+#include<iostream.h>
+#include<conio.h>
+enum boolean{false,true};
+template<class T>
+void swap(T &x,T &y)
+{	T t;	
+	t=x;
+	x=y;
+	y=t;
+}
+template<class T>
+void bubblesort(T &sortdata, int size)
+{	boolean swapped=true;
+	for(int i=0;(i<size-1)&&swapped;i++)
+	{	swapped=false;
+		for(int j=0;j<(size-1)-i;j++)
+		if(sortdata[j]>sortdata[j+1])
+		{	swapped=true;
+			swap(sortdata[j],sortdata[j+1]);
+		}
+	}
+}
+void main()
+{	int inum[25],i,size;
+	float fnum[25];
+	clrscr();
+	cout<<"\nBUBBLE SORTING"<<endl;
+	cout<<"\nEnter the size of integer vector :";
+	cin>>size;
+	cout<<"\nEnter the elements :";
+	for(i=0;i<size;i++)
+	cin>>inum[i];
+	bubblesort(inum,size);
+	cout<<"\nSorted vector :";
+	for(i=0;i<size;i++)
+	cout<<inum[i]<<" ";
+	
+	cout<<"\nEnter the size of float vector :";
+	cin>>size;
+	cout<<"\nEnter the elements :";
+	for(i=0;i<size;i++)
+	cin>>fnum[i];
+	bubblesort(fnum,size);
+	cout<<"\nSorted vector :";
+	for(i=0;i<size;i++)
+	cout<<fnum[i]<<" ";
+	getch();
+}
