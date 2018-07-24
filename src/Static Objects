@@ -1,0 +1,25 @@
+#include<iostream.h>
+#include<conio.h>
+class bita
+{	int a,c;
+	public:
+	bita(){}
+	void set(int x,int y)
+	{	a=x;
+		c=y;
+	}
+	void get()
+	{	cout<<"A:"<<a<<endl;
+		cout<<"C:"<<c<<endl;
+	}
+};
+void main()
+{	clrscr();
+	bita b;
+	static bita b1;
+	b.set(10,5);
+	b.get();
+	b1.set(1,2);
+	b1.get();
+	getch();
+}
