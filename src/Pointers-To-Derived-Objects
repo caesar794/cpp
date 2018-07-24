@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+class base
+{	public:
+	int b;
+	void show()
+	{	cout<<"\nB:"<<b<<endl;
+	}
+};
+class derive : public base
+{	public:
+	int d;
+	void show()
+	{	cout<<"\nD:"<<d<<endl;
+	}
+};
+void main()
+{	clrscr();
+	base *bp;
+	base b1;
+	bp=&b1;
+	bp->b1=10;
+	bp->show();
+	derive d1;
+	bp=&d1;
+	bp->b1=20;
+	bp->show();
+	derive *dp;
+	dp=&d1;
+	dp->d1=30;
+	dp->show();
+	((derive *)bp)->d1=40;
+	((derive *)bp)->show();
+	getch();
+}
