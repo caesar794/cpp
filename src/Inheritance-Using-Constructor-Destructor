@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	public:
+	int a;
+};
+class B
+{
+	public:
+	int b;
+};
+class AB
+{
+public:
+	A a1;
+	B b2;
+	AB(int c,int d)
+	{
+		a1.a=c;
+		b2.b=d;
+	cout<<"value of a"<<a1.a<<endl;
+	cout<<"value of b"<<b2.a<<endl;
+
+	}
+	~AB()
+	{
+	   cout<<"Destroy the counstructer"<<endl;
+	}
+};
+void main()
+{
+clrscr();
+AB ab1(20,12);
+getch();
+}
