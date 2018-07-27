@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+class shape
+{	protected:
+	int l,w;
+	public:
+	shape(int a=0;int b=0)
+	{	l=a;
+		w=b;
+	}
+	virtual void area()
+	{	cout<<"\nIn base area :";
+	}
+};
+class rectangle : class shape
+{	public:
+	rectangle(int a,int b):shape(a,b){}
+	void area()
+	{	cout<<"\nCalculating rectangle area :"<<l*w;
+	}
+};
+class triangle : class shape
+{	public:
+	triangle(int s,int t):shape(s,t){}
+	void area()
+	{	cout<<"\nCalculating triangle area :"<<(l*w)/2;
+	}
+};
+void main()
+{	clrscr();
+	shape *s;
+	rectangle r(5,3);
+	triangle t(2,3);
+	cout<<"\nRectangle area :";
+	s=&r;
+	s->area();
+	cout<<"\nTriangle area :";
+	s=&t;
+	s->area();
+	getch();
+}
