@@ -1,0 +1,93 @@
+/*wap in c++ to stack to use basic open pop and push*/
+#include<iostream.h>
+#include<conio.h>
+#define MAX 4
+class Sta{
+public:
+int stack[MAX];
+int top;
+void push(int);
+int pop();
+void show();
+};
+void Sta::push(int no)
+{
+char a;
+if(top==MAX-1)
+{
+cout<<"Stack full"<<endl;
+return;
+}
+do
+{
+cout<<"Enter the no to be inserted:"<<endl;
+cin>>no;
+top=top+1;
+stack[top]=no;
+cout<<"do you want to continue insertion Y/N"<<endl;
+cin>>a;
+}while(a=='y');
+}
+int Sta::pop()
+{
+int t;
+if(top==-1)
+{
+cout<<"Stack empty"<<endl;
+return -1;
+}
+t=stack[top];
+top=top-1;
+return t;
+}
+void Sta::show()
+{
+int i;
+cout<<"The Stack elements are:"<<endl;
+for(i=0;i<=top;i++)
+{
+cout<<stack[i]<<" ";
+}
+}
+void main()
+{
+Sta obj;
+char ch;
+int choice, no;
+obj.top=-1;
+do
+{
+cout<<"1.Insert"<<endl;
+cout<<"2.Delete"<<endl;
+cout<<"3.show or display"<<endl;
+cout<<"\nEnter your choice for the operation: "<<endl;
+cin>>choice;
+switch(choice)
+{
+case 1:
+{
+obj.push(no);
+obj.show();
+break;
+}
+case 2:
+{
+no=obj.pop();
+cout<<"The no deleted is "<<no<<endl;
+obj.show();
+break;
+}
+case 3:
+{
+obj.show();
+break;
+}
+default:
+cout<<"Wrong choice";
+break;
+}
+cout<<"\nDo you want to continue(y/n):"<<endl;
+cin>>ch;
+}while(ch=='y'||ch=='Y');
+getch();
+}
